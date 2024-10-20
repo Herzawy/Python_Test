@@ -1,0 +1,17 @@
+# .github/workflows/cron_job.yml
+name: Anaylsis Soil Moisture
+
+on:
+  schedule:
+    - cron: '* * * * *'  # This runs every minute
+  workflow_dispatch:  # Allows you to run it manually
+
+jobs:
+  trigger_fastapi_endpoint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send a request to FastAPI
+      run : echo "Hello world"
+      # run: |
+      #   curl -X GET "http://<your-fastapi-url>/"
