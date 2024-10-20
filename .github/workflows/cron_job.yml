@@ -4,7 +4,6 @@ name: Analysis-Soil-Moisture
 on:
   schedule:
     - cron: '* * * * *'  # This runs every minute
-  workflow_dispatch:  # Allows you to run it manually
 
 jobs:
   trigger_fastapi_endpoint:
